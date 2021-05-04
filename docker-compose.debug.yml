@@ -1,0 +1,11 @@
+
+version: '3.4'
+
+services:
+  primeservicetests:
+    image: primeservicetests
+    build:
+      context: .
+      dockerfile: unit-testing-using-dotnet-test/PrimeService.Tests/Dockerfile
+    volumes:
+      - ~/.vsdbg:c:\remote_debugger:rw
